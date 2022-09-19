@@ -1,0 +1,27 @@
+---
+const menuItems = [
+  'propósito',
+  'creaciones',
+  'proceso',
+  'productos',
+  'equipo',
+  'aliados',
+  'contacto'
+]
+---
+
+<nav
+  id='menu'
+  class='absolute flex flex-col lg:flex-row lg:gap-10 divide-y-2 lg:divide-y-0 lg:static top-16 left-0 w-full lg:w-max text-base text-center h-0 overflow-hidden lg:bg-transparent lg:h-auto bg-white'
+>
+  {
+    menuItems.map((item) => (
+      <a
+        href={`#${item}`}
+        class='text-dark-100 py-2.5 font-medium capitalize lg:py-0'
+      >
+        {item}
+      </a>
+    ))
+  }
+</nav>
