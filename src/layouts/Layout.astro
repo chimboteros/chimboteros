@@ -1,58 +1,57 @@
 ---
 export interface Props {
-	title: string;
+  title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props as Props
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    <style is:global>
+      @font-face {
+        font-family: 'Neue';
+        src: url(/fonts/NeueHaasDisplay-XThin.ttf);
+        font-weight: 200;
+      }
+      @font-face {
+        font-family: 'Neue';
+        src: url(/fonts/NeueHaasDisplay-Light.ttf);
+        font-weight: 300;
+      }
+      @font-face {
+        font-family: 'Neue';
+        src: url(/fonts/NeueHaasDisplay-Roman.ttf);
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: 'Neue';
+        src: url(/fonts/NeueHaasDisplay-Mediu.ttf);
+        font-weight: 500;
+      }
+      @font-face {
+        font-family: 'Neue';
+        src: url(/fonts/NeueHaasDisplay-Bold.ttf);
+        font-weight: 600;
+      }
+      @font-face {
+        font-family: 'Neue';
+        src: url(/fonts/NeueHaasDisplay-Black.ttf);
+        font-weight: 700;
+      }
+
+      html {
+        font-family: 'Neue';
+      }
+    </style>
+  </body>
 </html>
-
-<style is:global>
-@font-face {
-  font-family: 'Neue';
-  src: url(/fonts/NeueHaasDisplay-XThin.ttf);
-  font-weight: 200;
-}
-@font-face {
-  font-family: 'Neue';
-  src: url(/fonts/NeueHaasDisplay-Light.ttf);
-  font-weight: 300;
-}
-@font-face {
-  font-family: 'Neue';
-  src: url(/fonts/NeueHaasDisplay-Roman.ttf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: 'Neue';
-  src: url(/fonts/NeueHaasDisplay-Mediu.ttf);
-  font-weight: 500;
-}
-@font-face {
-  font-family: 'Neue';
-  src: url(/fonts/NeueHaasDisplay-Bold.ttf);
-  font-weight: 600;
-}
-@font-face {
-  font-family: 'Neue';
-  src: url(/fonts/NeueHaasDisplay-Black.ttf);
-  font-weight: 700;
-}
-
-html {
-	font-family: 'Neue';
-}
-</style>
