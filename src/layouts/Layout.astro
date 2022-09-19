@@ -1,4 +1,6 @@
 ---
+import '@/styles/globals.css'
+
 export interface Props {
   title: string
 }
@@ -17,41 +19,5 @@ const { title } = Astro.props as Props
   </head>
   <body>
     <slot />
-    <style is:global>
-      @font-face {
-        font-family: 'Neue';
-        src: url(/fonts/NeueHaasDisplay-XThin.ttf);
-        font-weight: 200;
-      }
-      @font-face {
-        font-family: 'Neue';
-        src: url(/fonts/NeueHaasDisplay-Light.ttf);
-        font-weight: 300;
-      }
-      @font-face {
-        font-family: 'Neue';
-        src: url(/fonts/NeueHaasDisplay-Roman.ttf);
-        font-weight: 400;
-      }
-      @font-face {
-        font-family: 'Neue';
-        src: url(/fonts/NeueHaasDisplay-Mediu.ttf);
-        font-weight: 500;
-      }
-      @font-face {
-        font-family: 'Neue';
-        src: url(/fonts/NeueHaasDisplay-Bold.ttf);
-        font-weight: 600;
-      }
-      @font-face {
-        font-family: 'Neue';
-        src: url(/fonts/NeueHaasDisplay-Black.ttf);
-        font-weight: 700;
-      }
-
-      html {
-        font-family: 'Neue';
-      }
-    </style>
   </body>
 </html>
