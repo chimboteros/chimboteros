@@ -1,0 +1,36 @@
+---
+import { products } from '@/data/products'
+---
+
+<section id='productos' class='py-20 lg:py-32 px-6 lg:px-0 bg-[#000]'>
+  <div class='max-w-[60rem] mx-auto mb-14 lg:mb-28 text-center text-white'>
+    <h2
+      class='text-[#E9B047] lg:text-white text-3xl lg:text-6xl font-medium mb-5'
+    >
+      Productos Innovadores
+    </h2>
+    <p class='text-base lg:text-2xl lg:leading-10'>
+      Transformamos nuestros recursos naturales y culturales en productos y
+      servicios de educación cultural, presentando nuestra primera colección <i
+        class='font-medium'>Tesoros Escondidos Chimbote</i
+      >.
+    </p>
+  </div>
+
+  <ul class='w-full lg:w-8/12 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12'>
+    {
+      products.map(({ name, description, classes }) => (
+        <li
+          class={`${classes.background} h-[23rem] lg:h-96 p-6 lg:p-8 grid bg-cover bg-center bg-no-repeat`}
+        >
+          <div class={`${classes.text} ${classes.position} text-center`}>
+            <h3 class='capitalize text-3xl lg:text-[2.7rem] font-medium lg:mb-0.5'>
+              {name}
+            </h3>
+            <em class='text-base lg:text-xl'>{description}</em>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</section>
