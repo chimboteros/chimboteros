@@ -1,0 +1,55 @@
+---
+const items = [
+  {
+    image: 'talleres-de-fotografía',
+    title: 'aprendiendo'
+  },
+  {
+    image: 'pisado-de-uvas',
+    title: 'investigando'
+  },
+  {
+    image: 'galeria-fotear',
+    title: 'educando'
+  }
+]
+---
+
+<section id='proceso' class='py-20 lg:py-32 px-6'>
+  <div
+    class='text-[#1A1A1A] w-full lg:w-6/12 mx-auto text-center mb-10 lg:mb-24'
+  >
+    <h2 class='text-3xl lg:text-7xl font-semibold mb-2 lg:mb-5'>
+      Proceso Creativo
+    </h2>
+    <p class='text-lg lg:text-2xl leading-normal lg:leading-10'>
+      Nos capacitamos, investigamos viajando y diseñamos para convertir nuestros
+      recursos naturales y culturales en productos y servicios de educación
+      cultural y tuírsitica.
+    </p>
+  </div>
+
+  <ul
+    class='grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-24 w-full lg:w-10/12 mx-auto'
+  >
+    {
+      items.map(({ title, image }) => (
+        <li class='relative'>
+          <img
+            src={`/images/mobile/${image}.png`}
+            alt={image}
+            class='block lg:hidden w-full object-cover'
+          />
+          <img
+            src={`/images/${image}.png`}
+            alt={image}
+            class='hidden lg:block w-full object-cover'
+          />
+          <h3 class='capitalize text-center absolute lg:static transform lg:transform-none bottom-7 left-1/2 -translate-x-1/2 lg:mt-10 text-3xl lg:text-4xl font-medium text-white lg:text-[#333]'>
+            {title}
+          </h3>
+        </li>
+      ))
+    }
+  </ul>
+</section>
