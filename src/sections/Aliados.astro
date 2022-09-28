@@ -1,0 +1,23 @@
+---
+import { allies } from '@/data/allies'
+---
+
+<section
+  id='aliados'
+  class='py-20 lg:py-32 px-6 lg:px-0 lg:bg-[url(/images/pescadores-chimboteros.jpg)] bg-cover bg-center lg:h-[65rem]'
+>
+  <div class='text-[#1A1A1A] max-w-[55rem] mx-auto text-center mb-10'>
+    <h2 class='mb-3 lg:mb-5 text-3xl lg:text-7xl font-semibold'>Aliados</h2>
+    <p class='text-base lg:text-2xl lg:leading-10'>
+      Articulamos esfuerzos, conectando emprendimientos. Producimos valor
+      cultural, compartiendo creatividad. Generando oportunidades, para el bien
+      común.
+    </p>
+  </div>
+
+  <ul
+    class='max-w-[60rem] mx-auto grid lg:grid-cols-4 gap-x-4 gap-y-1 border-t border-b border-[#1A1A1A] text-[#1A1A1A] py-5 text-center lg:text-left'
+  >
+    {allies.map((ally) => <li>{ally}</li>)}
+  </ul>
+</section>
