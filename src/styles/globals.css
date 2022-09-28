@@ -33,3 +33,11 @@ html {
   font-family: 'neue';
   scroll-behavior: smooth;
 }
+
+.formLabel {
+  @apply text-white lg:text-[#333] inline-block mb-2 text-base lg:text-xl;
+}
+
+.formInput {
+  @apply text-sm lg:text-base w-full outline-none rounded-full py-2 px-3 lg:px-4 opacity-70;
+}
