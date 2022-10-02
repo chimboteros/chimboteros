@@ -1,0 +1,65 @@
+---
+const expeditions = [
+  {
+    name: 'Alameda Chimbote',
+    description:
+      'Seis kilómetros de parques urbanos como un espacio estratégico para lograr hacer interactuar socialmente a los jóvenes creativos de Chimbote para el desarrollo de proyectos compartidos.'
+  },
+  {
+    name: 'La Antigua Estación del Ferrocarril',
+    description:
+      'Nuestro principal patrimonio cultural no cuenta con un proyecto integrado que conceptualice su gran valor histórico para desde ahí forjar la identidad cultural de Chimbote.'
+  },
+  {
+    name: 'Humedales de Chimbote',
+    description:
+      'La reserva ecológica urbana entre Chimbote y Nuevo Chimbote por revalorar desde sus artesanos, desde su fauna y desde su paisajismo, orientada hacia el turismo sostenible.'
+  }
+]
+---
+
+<section id='expediciones' class='grid lg:grid-cols-2 border-t lg:border-t-0'>
+  <div class='relative p-8 text-[#1A1A1A]'>
+    <div
+      class='w-[35rem] max-w-fit lg:max-w-full mx-auto lg:absolute-center md:text-center lg:text-left'
+    >
+      <div class='mb-8'>
+        <h2 class='text-2xl lg:text-5xl font-medium mb-1 lg:mb-1.5'>
+          Expediciones
+          <span class='inline-block text-[#737373] text-2xl align-middle'
+            >(<span class='inline-block translate-y-1.5'>*</span>)</span
+          >
+        </h2>
+        <em class='text-lg lg:text-2xl inline-block mb-5'
+          >Rutas urbanas e históricas</em
+        >
+        <p>
+          Recorridos urbanos para recorrer y analizar in situ los sitios y
+          patrimonios culturales de la provincia del Santa
+        </p>
+      </div>
+
+      <ul class='w-full flex flex-col gap-10 mb-8'>
+        {
+          expeditions.map(({ name, description }, index) => (
+            <li>
+              <h3 class='font-medium mb-1'>{index + 1 + ') ' + name}</h3>
+              <p class='text-sm'>{description}</p>
+            </li>
+          ))
+        }
+      </ul>
+
+      <em class='text-[#777]'>
+        (*) Fechas por consensuar entre los participantes seleccionados.
+      </em>
+    </div>
+  </div>
+
+  <div class='relative'>
+    <img src='/images/aldea/cabaña.jpg' alt='la casona de garatea' />
+    <small class='absolute bottom-4 left-5 text-xs text-[#eee]'>
+      La Casona de Garatea <br /> Jazmín Cuba / Fotear
+    </small>
+  </div>
+</section>
