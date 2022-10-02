@@ -19,18 +19,20 @@ const expeditions = [
 ---
 
 <section id='expediciones' class='grid lg:grid-cols-2 border-t lg:border-t-0'>
-  <div class='relative p-8 text-[#1A1A1A]'>
+  <div class='relative py-14 px-10 text-[#1A1A1A]'>
     <div
       class='w-[35rem] max-w-fit lg:max-w-full mx-auto lg:absolute-center md:text-center lg:text-left'
     >
-      <div class='mb-8'>
-        <h2 class='text-2xl lg:text-5xl font-medium mb-1 lg:mb-1.5'>
+      <div class='text-center lg:text-left mb-10 lg:mb-8'>
+        <h2 class='text-3xl lg:text-5xl font-medium lg:mb-1'>
           Expediciones
-          <span class='inline-block text-[#737373] text-2xl align-middle'
+          <span
+            class='hidden lg:inline-block text-[#737373] text-2xl align-middle'
             >(<span class='inline-block translate-y-1.5'>*</span>)</span
           >
         </h2>
-        <em class='text-lg lg:text-2xl inline-block mb-5'
+        <em
+          class='text-lg lg:text-2xl inline-block mb-3 lg:mb-5 text-[#7B7B7B] lg:text-inherit'
           >Rutas urbanas e históricas</em
         >
         <p>
@@ -43,8 +45,10 @@ const expeditions = [
         {
           expeditions.map(({ name, description }, index) => (
             <li>
-              <h3 class='font-medium mb-1'>{index + 1 + ') ' + name}</h3>
-              <p class='text-sm'>{description}</p>
+              <h3 class='text-lg lg:text-base font-medium mb-1'>
+                {index + 1 + ') ' + name}
+              </h3>
+              <p class='text-base lg:text-sm'>{description}</p>
             </li>
           ))
         }
