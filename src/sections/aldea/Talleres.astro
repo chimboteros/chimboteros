@@ -1,0 +1,45 @@
+---
+const workshops = [
+  'La arquitectura y el branding emocional',
+  'La arquitectura y la gestión cultural',
+  'La arquitectura y el turismo sostenible'
+]
+---
+
+<section id='talleres' class='grid lg:grid-cols-2 border-t lg:border-t-0'>
+  <div class='relative order-1 lg:order-none'>
+    <img src='/images/aldea/estatuas.jpg' alt='estatuas de niñas danzando' />
+    <small class='absolute bottom-4 left-5 text-xs text-[#eee]'>
+      Escultura en el <br /> bulevar Isla Blanca <br /> David Aguedo / Fotear
+    </small>
+  </div>
+
+  <div class='relative p-8'>
+    <div
+      class='w-[30rem] max-w-fit lg:max-w-full mx-auto lg:absolute-center md:text-center lg:text-left'
+    >
+      <div class='mb-10'>
+        <h2 class='text-2xl lg:text-5xl font-medium mb-1'>Talleres</h2>
+        <em class='text-lg lg:text-2xl mb-5 inline-block'>Currícula creativa</em
+        >
+        <p class='text-base lg:text-lg'>
+          Capacitaciones en áreas complementarias a la técnica arquitectónica
+          orientadas al desarrollo cultural y turístico:
+        </p>
+      </div>
+
+      <ol class='w-full flex flex-col gap-8'>
+        {
+          workshops.map((workshop, index) => (
+            <li>
+              <h3 class='capitalize text-lg lg:text-xl font-medium mb-1'>
+                {`${index + 1}) Taller 0${index + 1}:`}
+              </h3>
+              <p class='text-base lg:text-lg'>{workshop}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </div>
+</section>
