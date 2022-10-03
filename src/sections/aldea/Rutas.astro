@@ -1,0 +1,70 @@
+---
+import Heading from '@/components/aldea/Heading.astro'
+
+const routes = [
+  {
+    name: 'Urbana',
+    description:
+      'Articular y dotar a las calles, plazas, lugares y edificaciones urbanas con potencial turístico de una arquitectura con identidad cultural.',
+    textColor: 'text-[#FEB109]'
+  },
+  {
+    name: 'Creativa',
+    description:
+      'Articular y plasmar a los personajes destacados de nuestra provincia, sus historias y valores creativos a través de la arquitectura.',
+    textColor: 'text-[#60B122]'
+  },
+  {
+    name: 'Histórica',
+    description:
+      'Articular y conceptualizar la historia y la cultura de los sitios que constituyen patrimonio cultural de la provincia del Santa.',
+    textColor: 'text-[#833014]'
+  },
+  {
+    name: 'Ancestral',
+    description:
+      'Conceptualizar la historia, la cultura e infraestructura de los sitios que constituyen patrimonio cultural de la provincia del Santa.',
+    textColor: 'text-[#ED640D]'
+  }
+]
+---
+
+<section id='rutas' class='grid lg:grid-cols-2 border-t lg:border-t-0'>
+  <div class='relative py-14 px-10'>
+    <div
+      class='w-[35rem] max-w-fit lg:max-w-full mx-auto lg:absolute-center md:text-center lg:text-left'
+    >
+      <div class='text-center lg:text-left mb-10 lg:mb-8 [&>p]:text-base'>
+        <Heading
+          title='Rutas Culturales'
+          subtitle='La Red Chimbote'
+          description='Rutas con atractivos asociados al urbanismo con una arquitectura por convertir en proyectos de impacto cultural, a ser subidas a la Red Digital de Chimbote.'
+        />
+      </div>
+
+      <ul class='w-full flex flex-col gap-7'>
+        {
+          routes.map(({ name, description, textColor }) => (
+            <li>
+              <h3 class={`${textColor} text-lg lg:text-base font-medium mb-1`}>
+                #LaRuta{name}
+              </h3>
+              <p class='text-base lg:text-sm'>{description}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class='relative'>
+    <img
+      src='/images/aldea/estación-del-ferrocarril.jpg'
+      alt='estación del ferrocarril de chimbote'
+    />
+    <small class='absolute bottom-4 left-5 text-xs text-[#eee]'>
+      Segunda nave <br /> de la antigua Estación <br /> del Ferrocarril, <br /> Joan
+      Gavelán / Fotear
+    </small>
+  </div>
+</section>
