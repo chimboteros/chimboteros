@@ -38,6 +38,10 @@
     font-family: 'neue';
     scroll-behavior: smooth;
   }
+
+  body {
+    color: #1a1a1a;
+  }
 }
 
 @layer components {
