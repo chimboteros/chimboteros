@@ -1,0 +1,78 @@
+---
+import Heading from '@/components/aldea/Heading.astro'
+
+const teamMembers = [
+  {
+    name: 'David Aguedo',
+    field: 'dirección',
+    summary:
+      'Administrador, diseñador y promotor cultural especializado en el mundo del branding emocional. Responsable de conceptualizar y dirigir los proyectos integrando cultura, producción y turismo.'
+  },
+  {
+    name: 'Joan Gavelán',
+    field: 'internet',
+    summary:
+      'Desarrollador digital de proyectos creativos en cultura y turismo. Responsable del desarrollo, la comunicación digital y de subir los contenidos arquitectónicos a la futura Red Chimbote.'
+  },
+  {
+    name: 'Brisna Villanueva',
+    field: 'arquitectura',
+    summary:
+      'Arquitecta dedicada a crear espacios que despierten emociones, cobijen y rescaten la identidad del usuario. Responsable de gestionar los talleres de  capacitación y las expediciones urbanas de Aldea 2022.'
+  },
+  {
+    name: 'Thony Juárez',
+    field: 'fotografía',
+    summary:
+      'Promotor cultural y fotógrafo profesional especializado en proyectos de artes visuales. Responsable de coberturar y gestionar los contenidos visuales y arquitectónicos del proyecto.'
+  },
+  {
+    name: 'Oswaldo Viera',
+    field: 'comunicación',
+    summary:
+      'Estudiante de Comunicación Social y diseñador con experiencia en la gestión de redes sociales. Responsable de la gestión y promoción de los contenidos gráficos y visuales del proyecto.'
+  }
+]
+---
+
+<section id='equipo'>
+  <div class='py-14 lg:py-28 px-10'>
+    <div class='max-w-[40rem] mx-auto text-center mb-12 lg:mb-20'>
+      <Heading
+        title='Equipo Creativo'
+        subtitle='Valores compartidos, una visión común'
+        description='La arquitectura demanda de un trabajo multidisciplinario de distintos talentos, desde su concepción misma hasta su forma más inspiradora de compartirla.'
+      />
+    </div>
+
+    <ul
+      class='max-w-[70rem] mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-5 md:gap-7 lg:gap-5'
+    >
+      {
+        teamMembers.map(({ name, field, summary }) => (
+          <li class='flex flex-col gap-2.5 lg:gap-3.5'>
+            <img src={`/images/aldea/team/${name}.png`} alt={name} />
+
+            <div>
+              <h3 class='text-[#1CC854] text-xl font-medium'>{name}</h3>
+              <em class='text-[#7B7B7B]'>{field}</em>
+            </div>
+
+            <p class='lg:text-sm'>{summary}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <img
+    src='/images/aldea/equipo-aldea.jpg'
+    alt='miembros del equipo aldea charlando'
+    class='hidden md:block'
+  />
+  <img
+    src='/images/aldea/mobile/equipo-aldea.jpg'
+    alt='miembros del equipo aldea charlando'
+    class='block md:hidden w-full'
+  />
+</section>
