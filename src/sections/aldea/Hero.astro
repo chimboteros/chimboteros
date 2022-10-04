@@ -1,7 +1,25 @@
+---
+import Header from '@/components/Header.astro'
+
+const menuItems = [
+  'propósito',
+  'talleres',
+  'expediciones',
+  'convocatoria',
+  'beneficios',
+  'rutas',
+  'equipo',
+  'festividad',
+  'contacto'
+]
+---
+
 <section
   id='hero'
   class='min-h-[52rem] h-screen bg-[url(/images/aldea/hotel-de-turistas-chimbote.jpg)] bg-center bg-cover'
 >
+  <Header menuItems={menuItems} />
+
   <div
     class='max-w-[24rem] mx-auto relative top-24 lg:top-32 text-[#1A1A1A] text-center'
   >
