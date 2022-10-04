@@ -1,5 +1,11 @@
 ---
 import Navbar from './Navbar.astro'
+
+interface Props {
+  menuItems: string[]
+}
+
+const { menuItems } = Astro.props as Props
 ---
 
 <header
@@ -16,7 +22,7 @@ import Navbar from './Navbar.astro'
   </a>
 
   <!-- nav -->
-  <Navbar />
+  <Navbar menuItems={menuItems} />
 
   <!-- fb icon -->
   <a href='https://www.facebook.com/chimboteros/' target='_blank'>

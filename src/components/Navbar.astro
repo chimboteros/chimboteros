@@ -1,13 +1,9 @@
 ---
-const menuItems = [
-  'propósito',
-  'creaciones',
-  'proceso',
-  'productos',
-  'equipo',
-  'aliados',
-  'contacto'
-]
+export interface Props {
+  menuItems: string[]
+}
+
+const { menuItems } = Astro.props as Props
 ---
 
 <nav
