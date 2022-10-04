@@ -1,0 +1,68 @@
+---
+import Heading from '@/components/aldea/Heading.astro'
+import Footer from '@/components/Footer.astro'
+---
+
+<section
+  id='contacto'
+  class='h-[90rem] md:h-[100rem] py-14 lg:py-32 px-10 bg-[url(/images/aldea/mobile/edificio.jpg)] md:bg-[url(/images/aldea/edificio.jpg)] bg-cover bg-bottom relative'
+>
+  <div class='w-max mx-auto text-center mb-8 lg:mb-2'>
+    <Heading title='Contacto' subtitle='Consultas y sugerencias' />
+  </div>
+
+  <form
+    name='formulario-aldea'
+    method='POST'
+    data-netlify='true'
+    class='grid md:grid-cols-2 gap-3 md:gap-5 max-w-[30rem] mx-auto'
+  >
+    <div class='md:col-span-1'>
+      <label for='fullName' class='aldea-form-label'>Nombres:</label>
+      <input
+        type='text'
+        id='fullName'
+        name='fullName'
+        class='aldea-form-input'
+        required
+      />
+    </div>
+
+    <div class='md:col-span-1'>
+      <label for='email' class='aldea-form-label'>Correo:</label>
+      <input
+        type='email'
+        id='email'
+        name='email'
+        class='aldea-form-input'
+        required
+      />
+    </div>
+
+    <div class='md:col-span-2 [&>textarea]:rounded-2xl'>
+      <label for='message' class='aldea-form-label'>Mensaje:</label>
+      <textarea
+        name='message'
+        id='message'
+        cols='30'
+        rows='3'
+        class='aldea-form-input'
+        required></textarea>
+    </div>
+
+    <button
+      type='submit'
+      class='md:col-span-2 mx-auto py-2 px-6 bg-[#1A1A1A] hover:bg-white transition duration-200 text-white hover:text-[#1A1A1A] border hover:border-[#1a1a1a] rounded-full'
+    >
+      Enviar
+    </button>
+  </form>
+
+  <img
+    src='/images/aldea/logo-chimboteros.png'
+    alt='chimboteros logo'
+    class='block w-[25rem] lg:w-[35rem] max-w-full mx-auto mt-24'
+  />
+
+  <Footer />
+</section>
