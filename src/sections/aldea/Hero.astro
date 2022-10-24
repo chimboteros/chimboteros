@@ -2,12 +2,12 @@
 import Header from '@/components/Header.astro'
 
 const menuItems = [
-  'propósito',
-  'talleres',
-  'expediciones',
   'convocatoria',
   'beneficios',
+  'talleres',
+  'expediciones',
   'rutas',
+  'postulación',
   'equipo',
   'festividad',
   'contacto'
@@ -18,31 +18,33 @@ const menuItems = [
   id='hero'
   class='min-h-[52rem] h-screen lg:h-[75rem] bg-[url(/images/aldea/hotel-de-turistas-chimbote.jpg)] bg-center bg-cover'
 >
-  <Header menuItems={menuItems} />
+  <Header brandIcon='house' fb='aldeadelperu' menuItems={menuItems} />
 
   <div
-    class='max-w-[24rem] mx-auto relative top-24 lg:top-36 text-[#1A1A1A] text-center'
+    class='max-w-[24rem] lg:max-w-[30rem] mx-auto relative top-24 lg:top-36 text-[#1A1A1A] text-center'
   >
-    <h1 class='text-5xl lg:text-7xl font-medium'>Aldea</h1>
-    <em class='text-2xl lg:text-4xl mb-5 lg:mb-10 block'
+    <h1 class='text-5xl lg:text-[5rem] font-medium'>Aldea</h1>
+    <em class='text-2xl lg:text-[2.4rem] mb-5 lg:mb-10 block'
       >Arquitectura Cultural</em
     >
-    <p class='text-base lg:text-xl mb-2.5 lg:mb-5'>
+    <p class='text-base lg:text-[1.3rem] mb-2.5 lg:mb-5'>
       Soñamos con ciudades cuyos espacios sean en sí mismos vivencias turísticas
       por amar.
     </p>
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
-      viewBox='0 0 24 24'
-      stroke-width={2}
-      stroke='currentColor'
-      class='w-7 h-7 lg:w-10 lg:h-10 mx-auto text-[#26C593]'
-    >
-      <path
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        d='M19.5 8.25l-7.5 7.5-7.5-7.5'></path>
-    </svg>
+    <a href='#introduction'>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 24 24'
+        stroke-width={2}
+        stroke='currentColor'
+        class='w-7 h-7 lg:w-10 lg:h-10 mx-auto text-[#26C593]'
+      >
+        <path
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          d='M19.5 8.25l-7.5 7.5-7.5-7.5'></path>
+      </svg>
+    </a>
   </div>
 </section>

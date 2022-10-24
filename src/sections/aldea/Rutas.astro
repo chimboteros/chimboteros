@@ -5,13 +5,13 @@ const routes = [
   {
     name: 'Urbana',
     description:
-      'Articular y dotar a las calles, plazas, lugares y edificaciones urbanas con potencial turístico de una arquitectura con identidad cultural.',
+      'Unir y dotar a las calles, plazas, lugares y edificaciones urbanas con identidad cultural y potencial turístico.',
     textColor: 'text-[#FEB109]'
   },
   {
     name: 'Creativa',
     description:
-      'Articular y plasmar a los personajes destacados de nuestra provincia, sus historias y valores creativos a través de la arquitectura.',
+      'Plasmar a los personajes destacados de nuestra provincia, con sus historias y valores creativos, para culturizar a la ciudadanía.',
     textColor: 'text-[#60B122]'
   },
   {
@@ -23,7 +23,7 @@ const routes = [
   {
     name: 'Ancestral',
     description:
-      'Conceptualizar la historia, la cultura e infraestructura de los sitios que constituyen patrimonio cultural de la provincia del Santa.',
+      'Rescatar la riqueza artística y constructiva de los sitios arqueológicos para su aplicación en las construccciones urbanas.',
     textColor: 'text-[#ED640D]'
   }
 ]
@@ -34,22 +34,22 @@ const routes = [
     <div
       class='w-[35rem] max-w-fit lg:max-w-full mx-auto lg:absolute-center md:text-center lg:text-left'
     >
-      <div class='text-center lg:text-left mb-10 lg:mb-8 [&>p]:text-base'>
+      <div class='text-center lg:text-left mb-10 lg:mb-8'>
         <Heading
           title='Rutas Culturales'
           subtitle='La Red Chimbote'
-          description='Rutas con atractivos asociados al urbanismo con una arquitectura por convertir en proyectos de impacto cultural, a ser subidas a la Red Digital de Chimbote.'
+          description='Rutas con atractivos asociados a ser subidas a la Red Chimbote.'
         />
       </div>
 
-      <ul class='w-full flex flex-col gap-7'>
+      <ul class='w-full flex flex-col gap-5'>
         {
           routes.map(({ name, description, textColor }) => (
             <li>
-              <h3 class={`${textColor} text-lg lg:text-base font-medium mb-1`}>
+              <h3 class={`${textColor} text-lg font-medium mb-1`}>
                 #LaRuta{name}
               </h3>
-              <p class='text-base lg:text-sm'>{description}</p>
+              <p class='text-base lg:text-lg'>{description}</p>
             </li>
           ))
         }

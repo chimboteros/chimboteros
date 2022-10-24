@@ -1,0 +1,65 @@
+---
+import Heading from '@/components/aldea/Heading.astro'
+
+const events = [
+  { name: 'Inicio de convocatoria', date: '24 de octubre a las 00:00 hrs' },
+  { name: 'Cierre de convocatoria', date: '08 de noviembre a las 23:59 hrs.' },
+  { name: 'Publicación de preseleccionados', date: '10 de noviembre' },
+  { name: 'Entrevistas individuales', date: '12 de noviembre' },
+  { name: 'Publicación de seleccionados', date: '15 de noviembre' },
+  { name: 'Conferencia de prensa', date: '17 de noviembre a las 11:00 hrs.' },
+  { name: 'Taller de inducción', date: '19 de noviembre a las 10:00 hrs.' },
+  { name: 'Talleres y expediciones', date: 'Diciembre, Enero y Febrero' },
+  {
+    name: 'Presentación de la festividad de Chimbote',
+    date: '4, 5 y 6 de diciembre, 2022'
+  }
+]
+---
+
+<section
+  id='postulación'
+  class='h-[88rem] md:h-[85rem] py-14 lg:py-24 bg-[url(/images/aldea/mobile/plaza-de-armas-de-chimbote.jpg)] md:bg-[url(/images/aldea/plaza-de-armas-de-chimbote.jpg)] bg-[length:100%] bg-bottom lg:bg-cover lg:bg-center bg-no-repeat relative'
+>
+  <img src='/images/aldea/cinta.png' alt='cinta' class='absolute top-0' />
+  <div
+    class='max-w-[50rem] mx-auto text-center [&>p]:text-base md:mt-6 lg:mt-8 mb-8 px-8'
+  >
+    <Heading
+      title='Postulación'
+      subtitle='Cronograma de postulación'
+      description='Jóvenes arquitectos con disponibilidad para participar en talleres y expediciones gratuitas con la meta de ser protagonistas en la tematización de la primera Festividad de Chimbote y en proyectos de innovación en curso.'
+    />
+  </div>
+
+  <div class='mx-auto flex flex-col gap-5 items-center'>
+    <h3 class='text-2xl lg:text-3xl font-medium text-center'>Cronograma</h3>
+    <div class='border-t-[1.5px] border-b-[1.5px] py-7 px-5 border-[#808183]'>
+      <ul class='flex flex-col gap-2'>
+        {
+          events.map(({ name, date }) => (
+            <li class='grid lg:grid-cols-[minmax(0,19.5rem)_minmax(0,1fr)] gap-3 text-center lg:text-left'>
+              <p class='lg:flex justify-between font-medium'>
+                {name}
+                <span>:</span>
+              </p>
+              <p>{date}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <a
+      href='https://docs.google.com/forms/u/0/d/1C3Un0JB8kE3iZTeEG4e0LbW7Z6K26P4VACsGcpY6hx4/viewform?edit_requested=true'
+      target='_blank'
+      rel='noreferrer noopener'
+      class='px-7 py-1.5 bg-[#34CC67] hover:bg-[#27b958] transition duration-200 text-white rounded-full cursor-pointer'
+    >
+      Postula
+    </a>
+  </div>
+
+  <small class='absolute bottom-4 left-4 text-[#eee] text-xs'>
+    La Plaza de Armas <br /> de Chimbote <br /> Ángel Zavaleta / Fotear
+  </small>
+</section>

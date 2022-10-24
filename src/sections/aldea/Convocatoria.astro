@@ -1,65 +1,31 @@
 ---
 import Heading from '@/components/aldea/Heading.astro'
-
-const events = [
-  { name: 'Inicio de convocatoria', date: '01 setiembre / 00:00 hrs' },
-  { name: 'Cierre de convocatoria', date: '15 setiembre / 23:59 hrs.' },
-  { name: 'Publicación de preseleccionados', date: '20 setiembre' },
-  { name: 'Entrevistas individuales', date: '25 setiembre / 16:00 hrs' },
-  { name: 'Publicación de seleccionados', date: '01 octubre' },
-  { name: 'Conferencia de prensa', date: '28 de septiembre' },
-  { name: 'Taller de inducción', date: '04 octubre / 16:00 hrs.' },
-  { name: 'Talleres y expediciones', date: 'Octubre y noviembre' },
-  {
-    name: 'Presentación de la festividad de Chimbote',
-    date: '4, 5 y 6 de diciembre, 2022'
-  }
-]
 ---
 
-<section
-  id='convocatoria'
-  class='h-[88rem] md:h-[85rem] py-14 lg:py-24 bg-[url(/images/aldea/mobile/plaza-de-armas-de-chimbote.jpg)] md:bg-[url(/images/aldea/plaza-de-armas-de-chimbote.jpg)] bg-[length:100%] bg-bottom lg:bg-cover lg:bg-center bg-no-repeat relative'
->
-  <img src='/images/aldea/cinta.png' alt='cinta' class='absolute top-0' />
-  <div
-    class='max-w-[45rem] mx-auto text-center [&>p]:text-base md:mt-6 lg:mt-8 mb-8 px-8'
-  >
-    <Heading
-      title='Convocatoria'
-      subtitle='Cronograma de postulación'
-      description='Jovenes arquitectos con disponibilidad de participar en talleres y expediciones gratuitas con la meta de ser protagonistas en la tematización de la primera Festividad de Chimbote.'
-    />
-  </div>
-
-  <div class='mx-auto flex flex-col gap-5 items-center'>
-    <h3 class='text-2xl lg:text-3xl font-medium text-center'>Cronograma</h3>
-    <div class='border-t-[1.5px] border-b-[1.5px] py-7 px-5 border-[#808183]'>
-      <ul class='flex flex-col gap-2'>
-        {
-          events.map(({ name, date }) => (
-            <li class='grid lg:grid-cols-[minmax(0,19.5rem)_minmax(0,1fr)] gap-3 text-center lg:text-left'>
-              <p class='lg:flex justify-between font-medium'>
-                {name}
-                <span>:</span>
-              </p>
-              <p>{date}</p>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-    <a
-      href='https://docs.google.com/forms/u/0/d/1C3Un0JB8kE3iZTeEG4e0LbW7Z6K26P4VACsGcpY6hx4/viewform?edit_requested=true'
-      target='_blank'
-      rel='noreferrer noopener'
-      class='px-7 py-1.5 bg-[#34CC67] hover:bg-[#27b958] transition duration-200 text-white rounded-full cursor-pointer'
+<section id='convocatoria' class='grid lg:grid-cols-2 border-t lg:border-t-0'>
+  <div class='relative py-14 px-10'>
+    <div
+      class='w-[30rem] max-w-fit lg:max-w-full mx-auto lg:absolute-center md:text-center lg:text-left'
     >
-      Postula
-    </a>
+      <div class='text-center lg:text-left mb-10'>
+        <Heading title='Convocatoria' subtitle='Arquitectos' />
+        <p class='lg:text-lg'>
+          La organización Chimboteros a través del proyecto Aldea convoca a
+          jóvenes arquitectos , para ser parte de un equipo multidisciplinario
+          que desarrolle proyectos de innovación en arquitectura,
+          infraestructura y urbanismo; con la finalidad de rescatar información
+          cultural y turística, que dote a nuestras ciudades de una identidad,
+          en mayor armonía con nuestro mediambiente.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <small class='absolute bottom-4 left-4 text-[#eee] text-xs'>
-    La Plaza de Armas <br /> de Chimbote <br /> Ángel Zavaleta / Fotear
-  </small>
+  <div class='relative'>
+    <img src='/images/aldea/casa.jpg' alt='casa en la caleta - chimbote' />
+    <small class='w-[7rem] absolute bottom-2 left-5 text-xs'>
+      Las Casonas de la Corporación Peruana del Santa, Chimbote <br /> Luis Mariños
+      / Fotear
+    </small>
+  </div>
 </section>

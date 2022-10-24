@@ -2,10 +2,12 @@
 import Navbar from './Navbar.astro'
 
 interface Props {
+  brandIcon: string
+  fb: string
   menuItems: string[]
 }
 
-const { menuItems } = Astro.props as Props
+const { menuItems, brandIcon, fb } = Astro.props as Props
 ---
 
 <header
@@ -18,14 +20,14 @@ const { menuItems } = Astro.props as Props
 
   <!-- boat icon -->
   <a href='#hero'>
-    <img class='w-9' src='/icons/barquito.svg' alt='barquito' />
+    <img class='w-7' src={`/icons/${brandIcon}.svg`} alt={brandIcon} />
   </a>
 
   <!-- nav -->
   <Navbar menuItems={menuItems} />
 
   <!-- fb icon -->
-  <a href='https://www.facebook.com/chimboteros/' target='_blank'>
+  <a href={`https://www.facebook.com/${fb}/`} target='_blank'>
     <img class='w-7' src='/icons/fb.svg' alt='fb circular logo' />
   </a>
 </header>
