@@ -39,7 +39,7 @@ const teamMembers = [
   <img src='/images/aldea/cinta.png' alt='cinta' class='absolute top-0' />
   <div class='py-14 lg:py-28 px-10'>
     <div
-      class='max-w-[40rem] mx-auto text-center md:mt-6 lg:mt-8 mb-12 lg:mb-20'
+      class='max-w-[52rem] mx-auto text-center md:mt-6 lg:mt-8 mb-12 lg:mb-20'
     >
       <Heading
         title='Equipo Creativo'
@@ -49,19 +49,21 @@ const teamMembers = [
     </div>
 
     <ul
-      class='max-w-[70rem] mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-5 md:gap-7 lg:gap-5'
+      class='max-w-[80rem] mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-5 md:gap-7 lg:gap-5'
     >
       {
         teamMembers.map(({ name, field, summary }) => (
-          <li class='flex flex-col gap-2.5 lg:gap-3.5'>
+          <li class='flex flex-col gap-2.5 lg:gap-4'>
             <img src={`/images/aldea/team/${name}.png`} alt={name} />
 
             <div>
-              <h3 class='text-[#1CC854] text-xl font-medium'>{name}</h3>
-              <em class='text-[#7B7B7B]'>{field}</em>
+              <h3 class='text-[#1CC854] text-xl lg:text-2xl font-medium'>
+                {name}
+              </h3>
+              <em class='text-[#7B7B7B] lg:text-xl'>{field}</em>
             </div>
 
-            <p class='lg:text-sm'>{summary}</p>
+            <p>{summary}</p>
           </li>
         ))
       }

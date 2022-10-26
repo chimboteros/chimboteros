@@ -15,7 +15,7 @@ const benefits = [
       src='/images/aldea/valle.jpg'
       alt='complejo arqueológico El Castillo, Chimbote'
     />
-    <small class='absolute bottom-4 left-5 text-xs text-[#eee]'>
+    <small class='absolute bottom-4 left-5 text-xs lg:text-sm text-[#eee]'>
       El complejo <br /> arqueológico El Castillo, <br /> Chimbote. <br /> David
       Aguedo / Fotear
     </small>
@@ -23,16 +23,20 @@ const benefits = [
 
   <div class='relative py-14 px-10'>
     <div
-      class='w-[32rem] max-w-fit lg:max-w-full mx-auto lg:absolute-center md:text-center lg:text-left'
+      class='w-[42rem] max-w-fit lg:max-w-full mx-auto lg:absolute-center md:text-center lg:text-left'
     >
       <div class='text-center lg:text-left mb-8'>
         <Heading title='Beneficios' subtitle='Participantes' />
       </div>
 
       <ul
-        class='list-disc md:list-none lg:list-disc flex flex-col gap-3 md:gap-5 lg:gap-1 pl-4'
+        class='list-disc md:list-none lg:list-disc flex flex-col gap-3 md:gap-5 lg:gap-3 pl-4'
       >
-        {benefits.map((benefit) => <li class='lg:text-lg'>{benefit}.</li>)}
+        {
+          benefits.map((benefit) => (
+            <li class='lg:text-2xl lg:leading-9'>{benefit}.</li>
+          ))
+        }
       </ul>
     </div>
   </div>

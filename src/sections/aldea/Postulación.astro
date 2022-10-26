@@ -23,7 +23,7 @@ const events = [
 >
   <img src='/images/aldea/cinta.png' alt='cinta' class='absolute top-0' />
   <div
-    class='max-w-[50rem] mx-auto text-center [&>p]:text-base md:mt-6 lg:mt-8 mb-8 px-8'
+    class='max-w-[60rem] mx-auto text-center [&>p]:text-lg md:mt-6 lg:mt-8 mb-8 px-8'
   >
     <Heading
       title='Postulación'
@@ -33,12 +33,12 @@ const events = [
   </div>
 
   <div class='mx-auto flex flex-col gap-5 items-center'>
-    <h3 class='text-2xl lg:text-3xl font-medium text-center'>Cronograma</h3>
+    <h3 class='text-2xl lg:text-[2rem] font-medium text-center'>Cronograma</h3>
     <div class='border-t-[1.5px] border-b-[1.5px] py-7 px-5 border-[#808183]'>
       <ul class='flex flex-col gap-2'>
         {
           events.map(({ name, date }) => (
-            <li class='grid lg:grid-cols-[minmax(0,19.5rem)_minmax(0,1fr)] gap-3 text-center lg:text-left'>
+            <li class='grid lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] gap-3 text-center lg:text-left lg:text-lg'>
               <p class='lg:flex justify-between font-medium'>
                 {name}
                 <span>:</span>
@@ -53,13 +53,13 @@ const events = [
       href='https://docs.google.com/forms/u/0/d/1C3Un0JB8kE3iZTeEG4e0LbW7Z6K26P4VACsGcpY6hx4/viewform?edit_requested=true'
       target='_blank'
       rel='noreferrer noopener'
-      class='px-7 py-1.5 bg-[#34CC67] hover:bg-[#27b958] transition duration-200 text-white rounded-full cursor-pointer'
+      class='px-6 lg:px-8 py-1 lg:py-1.5 bg-[#34CC67] hover:bg-[#27b958] transition duration-200 text-white rounded-full cursor-pointer font-medium border lg:border-2 border-[#1A4629]'
     >
       Postula
     </a>
   </div>
 
-  <small class='absolute bottom-4 left-4 text-[#eee] text-xs'>
+  <small class='absolute bottom-4 left-4 text-[#eee] text-xs lg:text-sm'>
     La Plaza de Armas <br /> de Chimbote <br /> Ángel Zavaleta / Fotear
   </small>
 </section>

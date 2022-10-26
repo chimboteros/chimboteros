@@ -1,13 +1,12 @@
 ---
 import Heading from '@/components/aldea/Heading.astro'
-import Footer from '@/components/Footer.astro'
 ---
 
 <section
   id='contacto'
-  class='h-[90rem] md:h-[108rem] py-14 lg:py-32 px-10 bg-[url(/images/aldea/mobile/edificio.jpg)] md:bg-[url(/images/aldea/edificio.jpg)] bg-cover bg-bottom relative'
+  class='h-[90rem] md:h-[113rem] py-14 lg:py-32 px-10 bg-[url(/images/aldea/mobile/edificio.jpg)] md:bg-[url(/images/aldea/edificio.jpg)] bg-cover bg-bottom relative'
 >
-  <div class='w-max mx-auto text-center mb-8 lg:mb-2'>
+  <div class='w-max mx-auto text-center mb-10 lg:mb-2'>
     <Heading title='Contacto' subtitle='Consultas y sugerencias' />
   </div>
 
@@ -15,7 +14,7 @@ import Footer from '@/components/Footer.astro'
     name='formulario-aldea'
     method='POST'
     data-netlify='true'
-    class='grid md:grid-cols-2 gap-3 md:gap-5 max-w-[30rem] mx-auto'
+    class='grid md:grid-cols-2 gap-y-3 gap-x-10 max-w-[33rem] mx-auto'
   >
     <div class='md:col-span-1'>
       <label for='fullName' class='aldea-form-label'>Nombres:</label>
@@ -52,17 +51,14 @@ import Footer from '@/components/Footer.astro'
 
     <button
       type='submit'
-      class='md:col-span-2 mx-auto py-2 px-6 text-white bg-[#1A1A1A] hover:bg-[#494747] transition duration-200 rounded-full'
+      class='md:col-span-2 mx-auto py-1.5 px-9 text-white bg-[#1A1A1A] hover:bg-[#494747] transition duration-200 rounded-full'
     >
       Enviar
     </button>
   </form>
 
-  <img
-    src='/images/aldea/logo-chimboteros.png'
-    alt='chimboteros logo'
-    class='block w-[25rem] lg:w-[35rem] max-w-full mx-auto mt-24'
-  />
-
-  <Footer />
+  <div class='w-[25rem] lg:w-[35rem] max-w-full mx-auto mt-20 text-center'>
+    <p class='text-lg lg:text-2xl mb-10'>Produce:</p>
+    <img src='/images/aldea/logo-chimboteros.png' alt='chimboteros logo' />
+  </div>
 </section>

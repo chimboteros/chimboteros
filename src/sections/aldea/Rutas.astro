@@ -32,7 +32,7 @@ const routes = [
 <section id='rutas' class='grid lg:grid-cols-2 border-t lg:border-t-0'>
   <div class='relative py-14 px-10'>
     <div
-      class='w-[35rem] max-w-fit lg:max-w-full mx-auto lg:absolute-center md:text-center lg:text-left'
+      class='w-[42rem] max-w-fit lg:max-w-full mx-auto lg:absolute-center md:text-center lg:text-left'
     >
       <div class='text-center lg:text-left mb-10 lg:mb-8'>
         <Heading
@@ -46,10 +46,10 @@ const routes = [
         {
           routes.map(({ name, description, textColor }) => (
             <li>
-              <h3 class={`${textColor} text-lg font-medium mb-1`}>
+              <h3 class={`${textColor} text-lg lg:text-2xl font-medium mb-1`}>
                 #LaRuta{name}
               </h3>
-              <p class='text-base lg:text-lg'>{description}</p>
+              <p class='text-base lg:text-2xl lg:leading-9'>{description}</p>
             </li>
           ))
         }
@@ -62,7 +62,7 @@ const routes = [
       src='/images/aldea/estacion-del-ferrocarril.jpg'
       alt='estación del ferrocarril de chimbote'
     />
-    <small class='absolute bottom-4 left-5 text-xs text-[#eee]'>
+    <small class='absolute bottom-4 left-5 text-xs lg:text-sm text-[#eee]'>
       Segunda nave <br /> de la antigua Estación <br /> del Ferrocarril, <br /> Joan
       Gavelán / Fotear
     </small>

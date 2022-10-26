@@ -21,17 +21,19 @@ const expeditions = [
 <section id='expediciones' class='grid lg:grid-cols-2 border-t lg:border-t-0'>
   <div class='relative order-1 lg:order-none'>
     <img src='/images/aldea/estatuas.jpg' alt='estatuas de niñas danzando' />
-    <small class='absolute bottom-4 left-5 text-xs text-[#eee]'>
+    <small class='absolute bottom-4 left-5 text-xs lg:text-sm text-[#eee]'>
       La Casona de Garatea <br /> Jazmín Cuba / Fotear
     </small>
   </div>
 
   <div class='relative py-14 px-10 text-[#1A1A1A]'>
     <div
-      class='w-[35rem] max-w-fit lg:max-w-full mx-auto lg:absolute-center md:text-center lg:text-left'
+      class='w-[40rem] max-w-fit lg:max-w-full mx-auto lg:absolute-center md:text-center lg:text-left'
     >
-      <div class='text-center lg:text-left mb-10 lg:mb-8'>
-        <h2 class='text-3xl lg:text-5xl font-medium lg:mb-1'>
+      <div class='text-center lg:text-left mb-8'>
+        <h2
+          class='text-3xl md:text-[2.2rem] lg:text-[4rem] font-medium md:mb-1 lg:mb-7'
+        >
           Expediciones
           <span
             class='hidden lg:inline-block text-[#737373] text-2xl align-middle'
@@ -39,10 +41,10 @@ const expeditions = [
           >
         </h2>
         <em
-          class='text-lg lg:text-2xl inline-block mb-3 lg:mb-5 text-[#7B7B7B] lg:text-inherit'
+          class='text-lg md:text-xl lg:text-[2rem] mb-3 lg:mb-7 inline-block text-[#7B7B7B] lg:text-inherit'
           >Rutas urbanas e históricas</em
         >
-        <p class='lg:text-lg'>
+        <p class='text-base md:text-lg lg:text-2xl'>
           Recorridos urbanos para recorrer y analizar in situ los sitios y
           patrimonios culturales de la provincia del Santa
         </p>
@@ -52,10 +54,10 @@ const expeditions = [
         {
           expeditions.map(({ name, description }, index) => (
             <li>
-              <h3 class='text-lg font-medium mb-1'>
+              <h3 class='text-lg lg:text-2xl font-medium mb-1'>
                 {index + 1 + ') ' + name}
               </h3>
-              <p class='text-base lg:text-lg'>{description}</p>
+              <p class='text-base lg:text-xl'>{description}</p>
             </li>
           ))
         }
